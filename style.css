@@ -1,19 +1,136 @@
+:root {
+  --bg: #fafafa;
+  --text: #18181b;
+  --muted: #52525b;
+  --card-bg: #ffffff;
+  --border: #e4e4e7;
+  --accent: #2563eb;
+}
+
+body.dark {
+  --bg: #121214;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --card-bg: #1c1c20;
+  --border: #2e2e34;
+  --accent: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  max-width: 720px;
+  max-width: 760px;
   margin: 40px auto;
   padding: 0 20px;
-  background-color: #fafafa;
-  color: #1a1a1a;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 header {
-  border-bottom: 2px solid #e5e5e5;
-  padding-bottom: 16px;
-  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
-h1, h2 {
-  line-height: 1.2;
+h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+button#theme-toggle {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button#theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+}
+
+.card p {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.links {
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+}
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }

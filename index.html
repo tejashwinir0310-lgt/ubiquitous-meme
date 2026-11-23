@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
+  <title>Vexora — Portfolio</title>
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
   <header>
-    <h1>Hey, I'm [Your Name]</h1>
-    <p>Building my first corner of the internet.</p>
+    <div>
+      <h1>Hey, I'm Vexora</h1>
+      <p class="subtitle">Computer Science student & builder.</p>
+      <nav class="links">
+  <a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
+  <a href="mailto:your.email@example.com">Email</a>
+</nav>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
   </header>
 
   <main>
     <section>
-      <h2>What I'm Into</h2>
-      <p>Write a couple of sentences about a project, hobby, or topic you care about.</p>
+      <h2>About Me</h2>
+      <p>
+        I'm currently exploring programming, web development, and building practical projects from scratch. 
+        This is my personal space on the web to document what I'm learning.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Personal Website</h3>
+          <p>Built from scratch with HTML, CSS, and JavaScript, and hosted live on GitHub Pages.</p>
+          <span class="tag">HTML / CSS / JS</span>
+        </article>
+
+        <article class="card">
+          <h3>beginning_of_downfall</h3>
+          <p>im also a developing a vaccination tracker.</p>
+          <span class="tag">[Language / Tool]</span>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Made from scratch.</p>
+    <p>Built from scratch • <span id="year"></span></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
